@@ -14,7 +14,7 @@ h1{
 /* 3x3 grid Layout*/
 .game-container{
     display:grid;
-    grid-template-columns: repeat(3,120px);
+    grid-template-columns: repeat(3,1fr);
     grid-gap:15px;
     justify-content: center;
     margin-top: 30px;
