@@ -1,0 +1,62 @@
+body{
+    background-color: #1a1a2e;
+    color:#fff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin:0;
+    padding: 20px;
+}
+
+h1{
+    color:#e94560;
+}
+
+/* 3x3 grid Layout*/
+.game-container{
+    display:grid;
+    grid-template-columns: repeat(3,120px);
+    grid-gap:15px;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+
+/*The default empty plots */
+.plot{
+    width: 120px;
+    height: 120px;
+    background-color: #16213e;
+    border: 3px solid #0f3460;
+    border-radius: 15px;
+    cursor:pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    transition: transform 0.1 ease;
+
+}
+
+.plot:active{
+    transform: scale(0.95);
+}
+
+.plot.ghost::before{
+    content: '👻';
+}
+
+#reset-btn{
+    background-color: #e94560;
+    color: white;
+    border:none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: tranform 0.1s ease;
+}
+ #reset-btn:active{
+    transform: scale(0.95);
+ }
